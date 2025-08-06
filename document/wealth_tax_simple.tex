@@ -1,0 +1,123 @@
+%\input{tcilatex}
+%\input{tcilatex}
+%\input{tcilatex}
+%\input{tcilatex}
+
+
+\documentclass[12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage{color}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[authoryear]{natbib}
+\usepackage{ulem}
+\usepackage{rotating}
+\usepackage[unicode=true,
+bookmarks=true,bookmarksnumbered=false,bookmarksopen=true,bookmarksopenlevel=1,
+breaklinks=true,pdfborder={0 0 1},backref=section,colorlinks=true]{hyperref}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage[title]{appendix}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=Latex.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Wednesday, August 06, 2025 11:59:45}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\geometry{verbose}
+\PassOptionsToPackage{normalem}{ulem}
+\hypersetup{
+plainpages=false,urlcolor=magenta,citecolor=magenta,linkcolor=blue,pdfstartview=FitH,pdfview=FitH,plainpages=false,urlcolor=blue,citecolor=blue,linkcolor=blue,pdfstartview=FitH,pdfview=FitH}
+\makeatletter
+\graphicspath{{Figures/}} 
+\setlength{\marginparwidth}{0in} \setlength{\marginparsep}{0in}
+\setlength{\oddsidemargin}{0in} \setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.35in} \setlength{\topmargin}{-.50in}
+\setlength{\textheight}{9.45in}
+\renewcommand{\baselinestretch}{1.2}\small\normalsize
+\providecommand{\tabularnewline}{\\}
+\newcommand{\ssskip}{\vspace*{0.05cm}}
+\newcommand{\sskip}{\vspace*{0.15cm}}
+\newcommand{\lskip}{\vspace*{0.45cm}}
+\makeatother
+
+%\input{tcilatex}
+
+\begin{document}
+
+\title{\textbf{Wealth Tax and Entrepreneurs: A Simple Model inspired by \cite%
+{guvenen2023}}}
+\date{\today }
+\author{Alessandro Di Nola}
+\maketitle
+
+\section{Model}
+
+\begin{itemize}
+\item Household model:%
+\begin{equation*}
+V(a,z)=\max_{c}\left\{ \frac{c^{1-\sigma }}{1-\sigma }+\beta E\left[
+V(a^{\prime },z^{\prime })|z\right] \right\} 
+\end{equation*}%
+subject to%
+\begin{equation*}
+c+a^{\prime }=Y(a,z)+w(e)\ell ,\ \ \ a^{\prime }\geq 0
+\end{equation*}%
+\begin{equation*}
+Y(a,z)=\left\{ 
+\begin{array}{c}
+a+\left( \pi \left( a,z\right) +ra\right) \left( 1-\tau _{k}\right) \text{
+if CI tax} \\ 
+a\left( 1-\tau _{a}\right) +\pi \left( a,z\right) +ra\text{ if wealth tax }%
+\end{array}%
+\right. 
+\end{equation*}%
+where CI stands for \textquotedblleft capital income\textquotedblright .
+
+\item Entrepreneurial ability $z$ follows Markov chain with values 
+\begin{equation*}
+z=[0,z_{L},z_{H}]
+\end{equation*}%
+and transition matrix $\Pi _{z}$.
+
+\begin{itemize}
+\item Households with $z=0$ are normal workers
+
+\item Households with $z=z_{L}$ are \textit{unproductive} entrepreneurs
+
+\item Households with $z=z_{H}$ are \textit{productive} entrepreneurs.
+\end{itemize}
+
+\item Entrepreneurial profits $\pi (a,z)$ are given by:%
+\begin{equation*}
+\pi (a,z)=\max_{k\leq \lambda a}\left\{ zk^{\nu }-(r+\delta )k\right\} 
+\end{equation*}%
+where $\nu \in (0,1)$ is the span-of-control parameter.
+\end{itemize}
+
+\bigskip 
+
+\section{Fiscal Experiments}
+
+\bigskip 
+
+\begin{itemize}
+\item Calibrate benchmark model to US\ economy with $\tau _{k}=25\%$.
+
+\item Replace capital income tax with wealth tax $\tau _{a}>0$ is a
+revenue-neutral way (in Guvenen paper this requires setting $\tau _{a}=1.2\%$%
+).
+
+\item 
+\end{itemize}
+
+\end{document}
